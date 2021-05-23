@@ -4,8 +4,6 @@ vim.o.fileencoding = "utf-8"
 vim.o.encoding      = "UTF-8"             -- encodig utf-8
 vim.o.mouse = "a" -- mouse support
 vim.o.clipboard = "unnamedplus" -- oow yeeaah, baby, I can copy right in you!
--- Disable auto commenting
-vim.cmd'autocmd VimEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o'
 -- tags as word object
 vim.cmd('set iskeyword+=>')
 vim.cmd('set iskeyword+=<')
@@ -58,6 +56,8 @@ vim.o.pumheight = 10 -- max items in popups
 vim.o.cmdheight = 2 -- number line for shell
 vim.o.conceallevel = 0 -- show conceal text normally. I can see `` in markdown files
 vim.cmd('syntax on') -- syntax highlighting
+vim.cmd('filetype plugin on')
+vim.cmd('filetype indent on')
 --vim.wo.wrap         = false               -- do not divide the line if it is long.
 --vim.o.sidescrolloff = 5                   -- for nowrap. max side size or something about
 
@@ -68,7 +68,6 @@ vim.cmd('syntax on') -- syntax highlighting
 vim.o.completeopt = "menuone,noinsert,noselect"
 vim.g.completion_enable_auto_popup = 1
 vim.o.shortmess = vim.o.shortmess .. 'c' -- don't give ins-completion-menu messages
-vim.o.spelllang     = "en,ru" -- spell check
 
 -------------------------- Perfomance stuff
 vim.o.lazyredraw = true -- useful for when executing macros.
@@ -76,3 +75,7 @@ vim.o.lazyredraw = true -- useful for when executing macros.
 -- vim.o.timeoutlen = 100 -- ms to wait for mapping. By default timeoutlen is 1000 ms
 vim.o.updatetime = 300 -- used for CursorHold event (for document highlighting detection)
 vim.o.synmaxcol = 160  -- show syntax highlight until column number.
+
+-- Disable auto commenting
+vim.cmd'autocmd VimEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o'
+vim.cmd'au FileType * setlocal formatoptions-=cro'
