@@ -17,9 +17,6 @@ vim.api.nvim_set_keymap('n', '<C-c>', ':close<CR>', opts)
 vim.api.nvim_set_keymap('', 'U', '<C-r>', opts)
 vim.api.nvim_set_keymap('', '<C-r>', '<NOP>', opts)
 
--- Tab indent in insert mode
-vim.api.nvim_set_keymap('i', '<Tab>', '\t', opts)
-vim.api.nvim_set_keymap('i', '<S-Tab>', '\b', opts)
 
 -- stay in normal mode after inserting a new line
 -- vim.api.nvim_set_keymap('', 'o', 'o <Bs><Esc>', opts)
@@ -139,3 +136,6 @@ vim.api.nvim_exec([[
 ]], false)
 
 
+-- Tab indent in insert mode
+vim.api.nvim_set_keymap('i', '<Tab>', '\t', opts)
+vim.api.nvim_set_keymap('i', '<S-Tab>', '\b', opts)

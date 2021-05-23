@@ -29,7 +29,7 @@ vim.o.autoindent = true   -- copy the indentation from previous line
 vim.bo.autoindent = true
 vim.o.smarttab = true 	  -- tab infront of a line inserts blanks based on shiftwidth
 vim.cmd'autocmd FileType python set breakindentopt=shift:4' -- tabs size for python files
-vim.o.backspace     = "indent,eol,start"  -- backspaceever work on insert mode
+vim.o.backspace = "indent,eol,start"  -- backspaceever work on insert mode
 vim.o.whichwrap = 'b,s,<,>,[,],h,l' -- move to the next line at the end and start
 
 ------------------------ Search stuff

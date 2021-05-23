@@ -4,7 +4,9 @@ require('plugins')
 require('keymapping')
 
 -- Visual
-require('colorscheme.theme-edge')
+-- require('colorscheme.theme-edge')
+-- require('colorscheme.neon-config')
+require('colorscheme.one-vim')
 require('galaxyline-config')
 require('colorizer-config')
 
@@ -28,9 +30,6 @@ require('nvimtree-config')
 require('comment-config')
 require('startify-config')
 require('which-key-config')
--- require('sneak-config')
-
-
 
 -- Debugger
 require('debugpy')
@@ -39,3 +38,4 @@ require('debug-text-config')
 require('dap-config')
 require('dapui-config')
 -- require('telescope-dap-config')
+

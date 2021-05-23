@@ -19,7 +19,9 @@ vim.api.nvim_exec([[
 local use = require('packer').use
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'       -- Package manager
-  use 'sainnhe/edge'  -- nice theme
+  use 'Th3Whit3Wolf/one-nvim' -- current theme
+  -- minimap
+  use 'wfxr/minimap.vim'
 -- Russian!
   use 'lyokha/vim-xkbswitch'
 -- Quotes and parenthesis are best friends
@@ -51,6 +53,8 @@ require('packer').startup(function()
   use 'joshdick/onedark.vim'
   use 'gruvbox-community/gruvbox'
   use 'arcticicestudio/nord-vim'
+  use 'sainnhe/edge'
+  use "rafamadriz/neon"
 
 -- LSP and Autocomplete
   use 'neovim/nvim-lspconfig'

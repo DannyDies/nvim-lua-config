@@ -69,9 +69,10 @@ vim.api.nvim_set_keymap('n', '<Leader>a', 'ggVG', { noremap = true, silent = tru
 
 -- Balance window
 vim.api.nvim_set_keymap('n', '<Leader>=', '<C-W>=', { noremap = true, silent = true })
--- Do slit
+-- Do split
 vim.api.nvim_set_keymap('n', '<Leader>v', ':vsplit<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>s', ':split<CR>', { noremap = true, silent = true })
+
 
 local mappings = {
     ["c"] = "Close Buffer",
@@ -85,7 +86,7 @@ local mappings = {
     ["v"] = "Vertical Split",
     ["h"] = "Horizontal Split",
   s = {
-    name = 'Session',
+    name = '+Session',
     c = {":SClose<CR>", 'Close Session'},
     d = {":SDelete<CR>", "Delete Session"},
     l = {":SLoad<CR>", "Load Session"},
