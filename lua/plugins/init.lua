@@ -77,6 +77,7 @@ use {'glepnir/galaxyline.nvim', branch = 'main'}
   use 'theHamsta/nvim-dap-virtual-text'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   -- use 'haringsrob/nvim_context_vt'
+  use 'tell-k/vim-autopep8'
 
 --
 end)

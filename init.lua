@@ -17,6 +17,7 @@ require('lsp-config')
 require('compe-config')
 require('autopairs-config')
 require('treesitter-config')
+require('autopep8-config')
 
 -- Ez life
 require('comment-config')
