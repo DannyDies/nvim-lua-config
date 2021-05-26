@@ -23,12 +23,15 @@ vim.o.shiftwidth = 2
 vim.bo.shiftwidth = 2
 vim.o.expandtab = true    -- expand tabs to spaces
 vim.bo.expandtab = true    -- expand tabs to spaces
+vim.o.smarttab = true 	  -- tab infront of a line inserts blanks based on shiftwidth
+
+--[[ Tree sitter manages indent now
 vim.o.smartindent = true  -- smart indenting on new line for C-like programs
 vim.bo.smartindent = true
 vim.o.autoindent = true   -- copy the indentation from previous line
 vim.bo.autoindent = true
-vim.o.smarttab = true 	  -- tab infront of a line inserts blanks based on shiftwidth
--- vim.cmd'autocmd FileType python set breakindentopt=shift:4' -- tabs size for python files
+]]
+
 vim.o.backspace = "indent,eol,start"  -- backspaceever work on insert mode
 vim.o.whichwrap = 'b,s,<,>,[,],h,l' -- move to the next line at the end and start
 
@@ -42,7 +45,7 @@ vim.o.history = 10000 -- numbers of entries in history for ':' commands and sear
 ------------------------ Visual stuff
 vim.o.title = true
 vim.wo.number = true -- line numbers
--- vim.wo.relativenumber = true
+-- vim.wo.relativenumber = true - hate this option
 vim.o.termguicolors = true
 vim.o.t_Co = "256"
 vim.o.showmode = false -- doesn't show vim modes. useful with status lines
@@ -55,11 +58,18 @@ vim.wo.signcolumn = "yes" -- always single column. otherwise it would shift the 
 vim.o.pumheight = 10 -- max items in popups
 vim.o.cmdheight = 2 -- number line for shell
 vim.o.conceallevel = 0 -- show conceal text normally. I can see `` in markdown files
-vim.cmd('syntax on') -- syntax highlighting
-vim.cmd('filetype plugin on')
-vim.cmd('filetype indent on')
+
+-- By the way pep8 doesn't allow long lines
 --vim.wo.wrap         = false               -- do not divide the line if it is long.
 --vim.o.sidescrolloff = 5                   -- for nowrap. max side size or something about
+
+-- Tree sitter handle syntax now
+-- vim.cmd('syntax on') -- syntax highlighting
+
+ 
+vim.cmd('filetype plugin on') -- Need for disable autotocomment. without it autocmd doesn't work
+vim.cmd('filetype indent on') -- tree sitter manage indent too, but let it be
+-- vim.cmd'autocmd FileType python set breakindentopt=shift:4' -- tabs size for python files. now work's fine without it.
 
 -------------------------- Completion stuff
   -- menuone - show popup menu also when there is only one match available
@@ -71,8 +81,11 @@ vim.o.shortmess = vim.o.shortmess .. 'c' -- don't give ins-completion-menu messa
 
 -------------------------- Perfomance stuff
 vim.o.lazyredraw = true -- useful for when executing macros.
+
+-- Those 2 options break commenting plugin
 -- vim.o.ttimeoutlen = 10  -- ms to wait for a key code seq to complete
 -- vim.o.timeoutlen = 100 -- ms to wait for mapping. By default timeoutlen is 1000 ms
+
 vim.o.updatetime = 300 -- used for CursorHold event (for document highlighting detection)
 -- vim.o.synmaxcol = 160  -- show syntax highlight until column number.
 
