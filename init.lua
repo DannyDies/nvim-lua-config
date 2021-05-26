@@ -2,10 +2,9 @@
 require('general')
 require('plugins')
 require('keymapping')
+require('which-key-config')
 
 -- Visual
--- require('colorscheme.theme-edge')
--- require('colorscheme.neon-config')
 require('colorscheme.one-vim')
 require('galaxyline-config')
 require('colorizer-config')
@@ -13,29 +12,28 @@ require('colorizer-config')
 -- Terminal
 require('toggleterm-config')
 
--- Autocompletion and style
+-- Autocomplete
 require('lsp-config')
--- require('lspsaga-config')
 require('compe-config')
 require('autopairs-config')
-require('formatting')
+require('treesitter-config')
+
+-- Ez life
+require('comment-config')
+require('surround-config')
+
+-- Nav
+require('telescope-config')
+require('nvimtree-config')
+require('startify-config')
+require('quickscope-config')
 
 -- Git
 require('lazygit-config')
 require('gitsigns-config')
 
--- Nav
-require('telescope-config')
-require('nvimtree-config')
-require('comment-config')
-require('startify-config')
-require('which-key-config')
-
 -- Debugger
 require('debugpy')
-require('treesitter-config')
-require('debug-text-config')
 require('dap-config')
+require('debug-text-config')
 require('dapui-config')
--- require('telescope-dap-config')
-

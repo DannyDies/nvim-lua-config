@@ -28,7 +28,7 @@ vim.bo.smartindent = true
 vim.o.autoindent = true   -- copy the indentation from previous line
 vim.bo.autoindent = true
 vim.o.smarttab = true 	  -- tab infront of a line inserts blanks based on shiftwidth
-vim.cmd'autocmd FileType python set breakindentopt=shift:4' -- tabs size for python files
+-- vim.cmd'autocmd FileType python set breakindentopt=shift:4' -- tabs size for python files
 vim.o.backspace = "indent,eol,start"  -- backspaceever work on insert mode
 vim.o.whichwrap = 'b,s,<,>,[,],h,l' -- move to the next line at the end and start
 
@@ -42,7 +42,7 @@ vim.o.history = 10000 -- numbers of entries in history for ':' commands and sear
 ------------------------ Visual stuff
 vim.o.title = true
 vim.wo.number = true -- line numbers
-vim.wo.relativenumber = true
+-- vim.wo.relativenumber = true
 vim.o.termguicolors = true
 vim.o.t_Co = "256"
 vim.o.showmode = false -- doesn't show vim modes. useful with status lines
@@ -74,8 +74,8 @@ vim.o.lazyredraw = true -- useful for when executing macros.
 -- vim.o.ttimeoutlen = 10  -- ms to wait for a key code seq to complete
 -- vim.o.timeoutlen = 100 -- ms to wait for mapping. By default timeoutlen is 1000 ms
 vim.o.updatetime = 300 -- used for CursorHold event (for document highlighting detection)
-vim.o.synmaxcol = 160  -- show syntax highlight until column number.
+-- vim.o.synmaxcol = 160  -- show syntax highlight until column number.
 
 -- Disable auto commenting
-vim.cmd'autocmd VimEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o'
+-- vim.cmd'autocmd VimEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o'
 vim.cmd'au FileType * setlocal formatoptions-=cro'

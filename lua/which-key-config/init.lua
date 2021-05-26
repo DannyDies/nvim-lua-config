@@ -102,8 +102,8 @@ local mappings = {
   m = {
     name = "+Hop",
     w = {"<cmd>HopWord<CR>", 'Word'},
-    t = {"<cmd>HopChar2<CR>", '2 Char'},
-    o = {"<cmd>HopChar1<CR>", '1 Char'},
+    m = {"<cmd>HopChar2<CR>", '2 Char'},
+    n = {"<cmd>HopChar1<CR>", '1 Char'},
     l = {"<cmd>HopLine<CR>", 'Line'},
     p = {"<cmd>HopPattern<CR>", 'Pattern'}
     },

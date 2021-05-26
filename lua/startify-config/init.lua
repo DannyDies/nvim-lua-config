@@ -29,8 +29,8 @@ vim.g.startify_files_number =  9
 -- Header
 -- vim.g.startify_custom_header = "startify#center(g:custom_header)"
 
--- vim.g.startify_session_dir = '~/.config/nvim/session' 
-vim.g.startify_session_dir = vim.fn.stdpath("data") .. "/startify_session"
+vim.g.startify_session_dir = '~/.config/nvim/session'
+-- vim.g.startify_session_dir = vim.fn.stdpath("data") .. "/startify_session"
 
 
 vim.g.startify_lists = {{
@@ -52,7 +52,7 @@ vim.g.startify_lists = {{
 
 
 vim.api.nvim_exec(
-    "let startify_bookmarks = [{ 'a': '~/.config/alacritty/alacritty.yml' }, { 'i': '~/.config/nvim/init.lua' }, { 'z': '~/.zshrc' }, { 'd': '~/.dotfileslist' }, { 's': '~/Second-Brain/-000 Scratchpad.md' },]", true)
+    "let startify_bookmarks = [{ 'a': '~/.config/alacritty/alacritty.yml' }, { 'i': '~/.config/nvim/init.lua' }, { 'z': '~/.zshrc' }, { 'd': '~/.dotfileslist' }, { 's': '~/Second-Brain/-000 Scratchpad.md' },{ 'o': '~/Second-Brain/.obsidian.vimrc' },]", true)
 
 vim.g.startify_commands = { {
   pu = { "Update Plugins", ":PackerUpdate" }

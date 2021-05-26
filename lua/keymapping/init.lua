@@ -14,8 +14,8 @@ vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', opts)
 vim.api.nvim_set_keymap('n', '<C-c>', ':close<CR>', opts)
 
 -- Mapping U to Redo.
-vim.api.nvim_set_keymap('', 'U', '<C-r>', opts)
 vim.api.nvim_set_keymap('', '<C-r>', '<NOP>', opts)
+vim.api.nvim_set_keymap('', 'U', '<C-r>', opts)
 
 
 -- stay in normal mode after inserting a new line
@@ -51,6 +51,9 @@ vim.api.nvim_set_keymap('n', 'H', 'g^',  opts)
 vim.api.nvim_set_keymap('n', 'L', 'g$',  opts)
 vim.api.nvim_set_keymap('v', 'H', 'g^',  opts)
 vim.api.nvim_set_keymap('v', 'L', 'g$',  opts)
+-- Fast scroll
+vim.api.nvim_set_keymap('n', 'J', '10j',  opts)
+vim.api.nvim_set_keymap('n', 'K', '10k',  opts)
 
 -- Resize windows
 vim.api.nvim_set_keymap('n', '<M-j>', ':resize -2<CR>',  opts)
