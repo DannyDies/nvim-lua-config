@@ -18,6 +18,7 @@ vim.api.nvim_exec([[
 
 local use = require('packer').use
 require('packer').startup(function()
+-- Boss inda house
   use 'wbthomason/packer.nvim'       -- Package manager
 -- current theme
   use 'Th3Whit3Wolf/one-nvim' 
@@ -33,7 +34,6 @@ require('packer').startup(function()
   }
 -- Add indentation guides even on blank lines
   use { 'lukas-reineke/indent-blankline.nvim', branch="lua" }
-
 -- Leader the best
   use {
   "folke/which-key.nvim",
@@ -41,30 +41,25 @@ require('packer').startup(function()
     require("which-key").setup {}
   end
 }
-
- -- Syntax Highlighting and Visual Plugins
+-- Syntax Highlighting and Visual Plugins
   use 'norcalli/nvim-colorizer.lua'
   use 'tjdevries/colorbuddy.nvim'
   use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons', config = "require'bufferline'.setup{}"}
   use 'mhinz/vim-startify'
-  -- Tree sitter
+-- Tree sitter
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   use 'p00f/nvim-ts-rainbow'
-
 -- Status line, has nvim buffer requirements
-  use {'glepnir/galaxyline.nvim', branch = 'main'}
-  -- Theme for status line
+use {'glepnir/galaxyline.nvim', branch = 'main'}
+-- Theme for status line
   use "Iron-E/nvim-highlite"
-
 -- LSP and Autocomplete
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-compe'
   use 'windwp/nvim-autopairs'
   use 'ludovicchabant/vim-gutentags' -- Automatic tags management
-
 -- Terminal Integration
   use 'akinsho/nvim-toggleterm.lua'
-
 -- Navigation
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
   use 'kyazdani42/nvim-tree.lua'
@@ -82,8 +77,6 @@ require('packer').startup(function()
   use 'theHamsta/nvim-dap-virtual-text'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   -- use 'haringsrob/nvim_context_vt'
-
-
 
 --
 end)
