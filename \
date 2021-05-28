@@ -44,3 +44,4 @@ require('vim-markdown-config')
 require('vim-wiki-config')
 require('telescope-config.finders')
 
+vim.cmd[[nnoremap <leader>ff :lua require'telescope-config.finders'.fd()<cr>]]

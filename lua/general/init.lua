@@ -7,6 +7,7 @@ vim.o.clipboard = "unnamedplus" -- oow yeeaah, baby, I can copy right in you!
 -- tags as word object
 vim.cmd('set iskeyword+=>')
 vim.cmd('set iskeyword+=<')
+vim.o.foldlevel = 99 -- unfold all
 ------------------------- Swapfile global & local config
 vim.o.swapfile = false -- can open already open files
 vim.bo.swapfile = false
@@ -92,3 +93,5 @@ vim.o.updatetime = 300 -- used for CursorHold event (for document highlighting d
 -- Disable auto commenting
 -- vim.cmd'autocmd VimEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o'
 vim.cmd'au FileType * setlocal formatoptions-=cro'
+-- autochange cwd
+vim.cmd'autocmd BufEnter * silent! lcd %:p:h'

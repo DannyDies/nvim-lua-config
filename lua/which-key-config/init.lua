@@ -72,7 +72,8 @@ vim.api.nvim_set_keymap('n', '<Leader>=', '<C-W>=', { noremap = true, silent = t
 -- Do split
 vim.api.nvim_set_keymap('n', '<Leader>v', ':vsplit<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>s', ':split<CR>', { noremap = true, silent = true })
-
+-- change workign dir
+vim.api.nvim_set_keymap('n', '<Leader>cd', ':cd %:p:h<CR>:pwd<CR>', { noremap = true, silent = true })
 
 local mappings = {
     ["c"] = "Close Buffer",
@@ -95,9 +96,13 @@ local mappings = {
   },
   f = {
     name = '+Telescope',
-    f =  {"<Cmd>lua require(\'telescope.builtin\').find_files()<CR>", "Find files"},
+
+    -- f =  {"<Cmd>lua require(\'telescope.builtin\').find_files()<CR>", "Find files"},
+    f =  {"<Cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({}))<cr>", "Find files"},
     g =  {"<Cmd>lua require(\'telescope.builtin\').live_grep()<CR>", "Text Search"},
-    b =  {"<Cmd>lua require(\'telescope.builtin\').buffers()<CR>", "Buffers"}
+    b =  {"<Cmd>lua require(\'telescope.builtin\').buffers()<CR>", "Buffers"},
+    c =  {"<Cmd>lua require'telescope-config.finders'.fd_in_nvim()<cr>", "Nvim config"},
+    n =  {"<Cmd>lua require'telescope-config.finders'.fd_in_notes()<cr>", "Notes"}
   },
   m = {
     name = "+Hop",

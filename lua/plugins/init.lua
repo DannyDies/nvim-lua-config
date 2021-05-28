@@ -79,6 +79,11 @@ use {'glepnir/galaxyline.nvim', branch = 'main'}
   -- use 'haringsrob/nvim_context_vt'
   use 'tell-k/vim-autopep8'
 
+  -- use {'https://github.com/vimwiki/vimwiki', branch = 'dev' }
+  use 'https://github.com/vimwiki/vimwiki'
+  use 'https://github.com/godlygeek/tabular'
+  use 'https://github.com/plasticboy/vim-markdown'
+
 --
 end)
 
