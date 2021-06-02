@@ -57,7 +57,7 @@ use {'glepnir/galaxyline.nvim', branch = 'main'}
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-compe'
   use 'windwp/nvim-autopairs'
-  use 'ludovicchabant/vim-gutentags' -- Automatic tags management
+  -- use 'ludovicchabant/vim-gutentags' -- Automatic tags management
 -- Terminal Integration
   use 'akinsho/nvim-toggleterm.lua'
 -- Navigation

@@ -22,12 +22,13 @@ require('autopep8-config')
 -- Ez life
 require('comment-config')
 require('surround-config')
+require('quickscope-config')
 
 -- Nav
 require('telescope-config')
+require('telescope-config.finders')
 require('nvimtree-config')
 require('startify-config')
-require('quickscope-config')
 
 -- Git
 require('lazygit-config')
@@ -42,5 +43,4 @@ require('dapui-config')
 -- Vim wiki
 require('vim-markdown-config')
 require('vim-wiki-config')
-require('telescope-config.finders')
 

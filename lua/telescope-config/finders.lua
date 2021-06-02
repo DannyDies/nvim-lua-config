@@ -32,7 +32,8 @@ end
 -- Find files with_preview settings
 -- function fd()
 finders.fd_in_notes = function()
-  local opts = vim.deepcopy(center_list)
+  -- local opts = vim.deepcopy(center_list)
+  local opts = vim.deepcopy(with_preview)
   opts.prompt_prefix = 'Second Brain>'
   opts.cwd = [[/home/dannydies/Second-Brain/]]
   require'telescope.builtin'.fd(opts)

@@ -14,6 +14,7 @@ vim.bo.swapfile = false
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.autoread = true -- auto file change detection
+vim.cmd"autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif" -- auto change file on external change
 vim.o.hidden = true  -- allows hidden buffers, this means that a modified buffer doesn't need to be saved when changing
 ------------------------- Tabing and indenting stuff
 vim.o.tabstop = 2
