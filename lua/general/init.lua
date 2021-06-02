@@ -1,4 +1,6 @@
 --------------------------- Basics
+-- om hy goddness
+vim.cmd[[set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>]]
 vim.g.XkbSwitchEnabled = 1
 vim.o.fileencoding = "utf-8"
 vim.o.encoding      = "UTF-8"             -- encodig utf-8
@@ -48,8 +50,8 @@ vim.o.history = 10000 -- numbers of entries in history for ':' commands and sear
 vim.o.title = true
 vim.wo.number = true -- line numbers
 -- vim.wo.relativenumber = true - hate this option
-vim.o.termguicolors = true
-vim.o.t_Co = "256"
+vim.go.termguicolors = true
+vim.go.t_Co = "256"
 vim.o.showmode = false -- doesn't show vim modes. useful with status lines
 vim.wo.cursorline = true   -- show the current line.
 vim.o.scrolloff = 9 -- keep 9 lines below and up while scrolling

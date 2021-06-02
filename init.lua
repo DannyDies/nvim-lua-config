@@ -11,7 +11,7 @@ require('colorizer-config')
 
 -- Terminal
 require('toggleterm-config')
-
+-- 
 -- Autocomplete
 require('lsp-config')
 require('compe-config')

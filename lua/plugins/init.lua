@@ -21,7 +21,7 @@ require('packer').startup(function()
 -- Boss inda house
   use 'wbthomason/packer.nvim'       -- Package manager
 -- current theme
-  use 'Th3Whit3Wolf/one-nvim' 
+ use 'Th3Whit3Wolf/one-nvim' 
 -- Russian!
   use 'lyokha/vim-xkbswitch'
 -- Quotes and parenthesis are best friends
