@@ -73,7 +73,7 @@ vim.api.nvim_set_keymap('n', '<Leader>=', '<C-W>=', { noremap = true, silent = t
 vim.api.nvim_set_keymap('n', '<Leader>v', ':vsplit<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>s', ':split<CR>', { noremap = true, silent = true })
 -- change workign dir
-vim.api.nvim_set_keymap('n', '<Leader>cd', ':cd %:p:h<CR>:pwd<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<Leader>cd', ':cd %:p:h<CR>:pwd<CR>', { noremap = true, silent = true })
 
 local mappings = {
     ["c"] = "Close Buffer",

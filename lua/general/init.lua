@@ -1,14 +1,12 @@
 --------------------------- Basics
 -- om hy goddness
-vim.cmd[[set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>]]
+-- vim.cmd[[set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>]]
 vim.g.XkbSwitchEnabled = 1
 vim.o.fileencoding = "utf-8"
 vim.o.encoding      = "UTF-8"             -- encodig utf-8
 vim.o.mouse = "a" -- mouse support
 vim.o.clipboard = "unnamedplus" -- oow yeeaah, baby, I can copy right in you!
 -- tags as word object
-vim.cmd('set iskeyword+=>')
-vim.cmd('set iskeyword+=<')
 vim.o.foldlevel = 99 -- unfold all
 ------------------------- Swapfile global & local config
 vim.o.swapfile = false -- can open already open files

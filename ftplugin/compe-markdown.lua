@@ -10,19 +10,19 @@ require'compe'.setup {
   max_abbr_width = 100;
   max_kind_width = 100;
   max_menu_width = 100;
-  documentation = true;
+  -- documentation = true;
 
   source = {
     path = true;
     buffer = true;
-    calc = true;
+    -- calc = true;
     -- vsnip = true;
-    nvim_lsp = true;
-    nvim_lua = true;
-    spell = true;
+    -- nvim_lsp = true;
+    -- nvim_lua = true;
+    -- spell = true;
     tags = true;
-    snippets_nvim = true;
-    treesitter = true;
+    -- snippets_nvim = true;
+    -- treesitter = true;
     omni = true;
   };
 }
