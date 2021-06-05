@@ -107,7 +107,7 @@ local mappings = {
   f = {
     name = '+Telescope',
 
-    -- f =  {"<Cmd>lua require(\'telescope.builtin\').find_files()<CR>", "Find files"},
+    s =  {"<Cmd>lua require(\'telescope.builtin\').find_files()<CR>", "Default Files Search"},
     f =  {"<Cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({}))<cr>", "Find files"},
     g =  {"<Cmd>lua require(\'telescope.builtin\').live_grep()<CR>", "Text Search"},
     b =  {"<Cmd>lua require(\'telescope.builtin\').buffers()<CR>", "Buffers"},

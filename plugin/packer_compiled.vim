@@ -227,18 +227,6 @@ _G.packer_plugins = {
 }
 
 time("Defining packer_plugins", false)
--- Config for: which-key.nvim
-time("Config for which-key.nvim", true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time("Config for which-key.nvim", false)
--- Config for: surround.nvim
-time("Config for surround.nvim", true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rsurround\frequire\0", "config", "surround.nvim")
-time("Config for surround.nvim", false)
--- Config for: neogit
-time("Config for neogit", true)
-require('neogit').setup {}
-time("Config for neogit", false)
 -- Config for: nvim-comment
 time("Config for nvim-comment", true)
 require('nvim_comment').setup()
@@ -247,6 +235,18 @@ time("Config for nvim-comment", false)
 time("Config for nvim-bufferline.lua", true)
 require'bufferline'.setup{}
 time("Config for nvim-bufferline.lua", false)
+-- Config for: surround.nvim
+time("Config for surround.nvim", true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rsurround\frequire\0", "config", "surround.nvim")
+time("Config for surround.nvim", false)
+-- Config for: which-key.nvim
+time("Config for which-key.nvim", true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time("Config for which-key.nvim", false)
+-- Config for: neogit
+time("Config for neogit", true)
+require('neogit').setup {}
+time("Config for neogit", false)
 if should_profile then save_profiles() end
 
 END

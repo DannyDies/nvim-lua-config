@@ -23,14 +23,14 @@ vim.g.startify_session_persistence = 1
 -- Get rid of empy buffer on quit
 vim.g.startify_enable_special = 0
 -- The number of files to list.
-vim.g.startify_files_number =  5
+vim.g.startify_files_number =  7
 -- The number of spaces used for left padding.
 -- vim.g.startify_padding_left = 15
 -- Header
 -- vim.g.startify_custom_header = "startify#center(g:custom_header)"
 
 -- Disable wierd thing
-vim.g.indentLine_fileTypeExclude = 'dashboard'
+vim.g.indentLine_fileTypeExclude = {'startify'}
 
 -- Session folder
 vim.g.startify_session_dir = '~/.config/nvim/session'
@@ -49,14 +49,17 @@ vim.g.startify_lists = {{
     }, {
         type = 'bookmarks',
         header = {'   Bookmarks'}
-    }, {
-        type = 'dir',
-        header = {'   Curent Directory '..vim.fn.getcwd()..':'}
     }}
+  -- , {
+  --       type = 'dir',
+  --       header = {'   Curent Directory '..vim.fn.getcwd()..':'}
+  --   }}
 
 
 vim.api.nvim_exec(
-    "let startify_bookmarks = [{ 'a': '~/.config/alacritty/alacritty.yml' }, { 'i': '~/.config/nvim/init.lua' }, { 'z': '~/.zshrc' }, { 'd': '~/.dotfileslist' }, { 's': '~/Second-Brain/-000 Scratchpad.md' },{ 'o': '~/Second-Brain/.obsidian.vimrc' },]", true)
+    "let startify_bookmarks = [{ 'a': '~/.config/alacritty/alacritty.yml' }, { 'i': '~/.config/nvim/init.lua' }, { 'z': '~/.zshrc' }, { 'd': '~/.dotfileslist' },{ 'o': '~/Second-Brain/.obsidian.vimrc' },]", true)
+
+-- , { 's': '~/Second-Brain/-000 Scratchpad.md' }
 
 vim.g.startify_commands = { {
   pu = { "Update Plugins", ":PackerUpdate" }
