@@ -72,6 +72,8 @@ vim.api.nvim_set_keymap('n', '<Leader>=', '<C-W>=', { noremap = true, silent = t
 -- Do split
 vim.api.nvim_set_keymap('n', '<Leader>v', ':vsplit<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>h', ':split<CR>', { noremap = true, silent = true })
+-- depens on debugpy venv
+vim.api.nvim_set_keymap('n', '<Leader>b', '<cmd>call Black()<cr>', { noremap = true, silent = true })
 -- change workign dir
 -- vim.api.nvim_set_keymap('n', '<Leader>cd', ':cd %:p:h<CR>:pwd<CR>', { noremap = true, silent = true })
 
@@ -86,6 +88,7 @@ local mappings = {
     ["="] = "Balance window",
     ["v"] = "Vertical Split",
     ["h"] = "Horizontal Split",
+    ["b"] = "Black Formatter",
   -- s = {
   --   name = '+Dashboard',
   --   s = {":SearchSession<CR>", 'Search Sessions'},

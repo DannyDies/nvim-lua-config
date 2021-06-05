@@ -6,7 +6,8 @@ require('which-key-config')
 
 -- Visual
 require('colorscheme.one-vim')
-require('galaxyline-config')
+-- require('galaxyline-config')
+require('lualine-config')
 require('colorizer-config')
 
 -- Terminal

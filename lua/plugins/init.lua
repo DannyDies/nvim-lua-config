@@ -53,9 +53,16 @@ require('packer').startup(function()
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   use 'p00f/nvim-ts-rainbow'
 -- Status line, has nvim buffer requirements
-use {'glepnir/galaxyline.nvim', branch = 'main'}
--- Theme for status line
-  use "Iron-E/nvim-highlite"
+--   use {'glepnir/galaxyline.nvim', branch = 'main'}
+-- -- Theme for status line
+--   use "Iron-E/nvim-highlite"
+
+  use {
+    'hoob3rt/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
+
+
 -- LSP and Autocomplete
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-compe'
@@ -86,7 +93,7 @@ use {'glepnir/galaxyline.nvim', branch = 'main'}
   use 'https://github.com/vimwiki/vimwiki'
   use 'https://github.com/godlygeek/tabular'
   use 'https://github.com/plasticboy/vim-markdown'
-
+  use 'a-vrma/black-nvim'
 --
 end)
 

@@ -62,11 +62,11 @@ vim.api.nvim_exec(
 -- , { 's': '~/Second-Brain/-000 Scratchpad.md' }
 
 vim.g.startify_commands = { {
-  pu = { "Update Plugins", ":PackerUpdate" }
-}, {
-  ps = { "Sync Plugins", ":PackerSync" }
-},{
   pi = { "Install Plugins", ":PackerInstall" }
+}, {
+  pu = { "Update Plugins", ":PackerUpdate" }
+},{
+  ps = { "Sync Plugins", ":PackerSync" }
 }, {
   pc = { "Clean up Plugins", ":PackerClean" }
 }, }
