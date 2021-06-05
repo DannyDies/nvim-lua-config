@@ -35,7 +35,7 @@ vim.bo.autoindent = true
 ]]
 
 vim.o.backspace = "indent,eol,start"  -- backspaceever work on insert mode
-vim.o.whichwrap = 'b,s,<,>,[,],h,l' -- move to the next line at the end and start
+-- vim.o.whichwrap = 'b,s,<,>,[,],h,l' -- move to the next line at the end and start
 
 ------------------------ Search stuff
 vim.o.ignorecase = true -- Ignorecase when searching

@@ -48,7 +48,7 @@ vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true}
 vim.g.mapleader = ' '
 
 -- no hl
-vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>s', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
 -- explorer
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
@@ -79,7 +79,7 @@ local mappings = {
     ["c"] = "Close Buffer",
     ["e"] = "Explorer",
     ["t"] = "Terminal",
-    ["h"] = "No Highlight",
+    ["s"] = "No Highlight",
     ["l"] = "Lazy Git",
     ["a"] = "Select All",
     ["q"] = "Exit",
