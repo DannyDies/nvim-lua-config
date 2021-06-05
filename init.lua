@@ -28,7 +28,10 @@ require('quickscope-config')
 require('telescope-config')
 require('telescope-config.finders')
 require('nvimtree-config')
+require('hop-config')
 require('startify-config')
+-- require('dashboard-config')
+-- require('sessions-config')
 
 -- Git
 require('lazygit-config')
@@ -43,4 +46,5 @@ require('dapui-config')
 -- Vim wiki
 require('vim-markdown-config')
 require('vim-wiki-config')
+
 

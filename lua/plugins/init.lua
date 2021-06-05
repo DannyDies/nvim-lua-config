@@ -46,6 +46,9 @@ require('packer').startup(function()
   use 'tjdevries/colorbuddy.nvim'
   use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons', config = "require'bufferline'.setup{}"}
   use 'mhinz/vim-startify'
+  -- use 'glepnir/dashboard-nvim'
+  -- use 'rmagatti/auto-session' 
+  -- use 'rmagatti/session-lens'
 -- Tree sitter
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   use 'p00f/nvim-ts-rainbow'

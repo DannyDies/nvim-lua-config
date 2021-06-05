@@ -48,7 +48,7 @@ vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true}
 vim.g.mapleader = ' '
 
 -- no hl
-vim.api.nvim_set_keymap('n', '<Leader>s', ':set hlsearch!<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>n', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
 -- explorer
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
@@ -71,7 +71,7 @@ vim.api.nvim_set_keymap('n', '<Leader>a', 'ggVG', { noremap = true, silent = tru
 vim.api.nvim_set_keymap('n', '<Leader>=', '<C-W>=', { noremap = true, silent = true })
 -- Do split
 vim.api.nvim_set_keymap('n', '<Leader>v', ':vsplit<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>s', ':split<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>h', ':split<CR>', { noremap = true, silent = true })
 -- change workign dir
 -- vim.api.nvim_set_keymap('n', '<Leader>cd', ':cd %:p:h<CR>:pwd<CR>', { noremap = true, silent = true })
 
@@ -79,13 +79,23 @@ local mappings = {
     ["c"] = "Close Buffer",
     ["e"] = "Explorer",
     ["t"] = "Terminal",
-    ["s"] = "No Highlight",
+    ["n"] = "No Highlight",
     ["l"] = "Lazy Git",
     ["a"] = "Select All",
     ["q"] = "Exit",
     ["="] = "Balance window",
     ["v"] = "Vertical Split",
     ["h"] = "Horizontal Split",
+  -- s = {
+  --   name = '+Dashboard',
+  --   s = {":SearchSession<CR>", 'Search Sessions'},
+  --   d = {":Dashboard<CR>", 'Dashboard'},
+  --   S = {":SaveSession<CR>", "Save Session"},
+  --   r = {":RestoreSession<CR>", "Restore Session"},
+  --   d = {":DeleteSession<CR>", "Delete Session"}
+    -- l = {":SessionLoad<CR>", "Load Session"},
+    -- S = {":SessionSave<CR>", "Save Session"}
+  -- },
   s = {
     name = '+Session',
     c = {":SClose<CR>", 'Close Session'},

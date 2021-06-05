@@ -23,12 +23,16 @@ vim.g.startify_session_persistence = 1
 -- Get rid of empy buffer on quit
 vim.g.startify_enable_special = 0
 -- The number of files to list.
-vim.g.startify_files_number =  9
+vim.g.startify_files_number =  5
 -- The number of spaces used for left padding.
 -- vim.g.startify_padding_left = 15
 -- Header
 -- vim.g.startify_custom_header = "startify#center(g:custom_header)"
 
+-- Disable wierd thing
+vim.g.indentLine_fileTypeExclude = 'dashboard'
+
+-- Session folder
 vim.g.startify_session_dir = '~/.config/nvim/session'
 -- vim.g.startify_session_dir = vim.fn.stdpath("data") .. "/startify_session"
 
@@ -40,14 +44,14 @@ vim.g.startify_lists = {{
         type = 'sessions',
         header = {'   Sessions'}
     }, {
-        type = 'dir',
-        header = {'   Curent Directory '..vim.fn.getcwd()..':'}
+        type = 'files',
+        header = {'   Recent'}
     }, {
         type = 'bookmarks',
         header = {'   Bookmarks'}
     }, {
-        type = 'files',
-        header = {'   Recent'}
+        type = 'dir',
+        header = {'   Curent Directory '..vim.fn.getcwd()..':'}
     }}
 
 
@@ -57,6 +61,8 @@ vim.api.nvim_exec(
 vim.g.startify_commands = { {
   pu = { "Update Plugins", ":PackerUpdate" }
 }, {
+  ps = { "Sync Plugins", ":PackerSync" }
+},{
   pi = { "Install Plugins", ":PackerInstall" }
 }, {
   pc = { "Clean up Plugins", ":PackerClean" }
