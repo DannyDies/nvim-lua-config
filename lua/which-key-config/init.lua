@@ -54,7 +54,7 @@ vim.api.nvim_set_keymap('n', '<Leader>n', ':set hlsearch!<CR>', {noremap = true,
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- close buffer
-vim.api.nvim_set_keymap("n", "<leader>c", ":bdelete<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>c", ":BufDel<CR>", {noremap = true, silent = true})
 
 -- Quit
 vim.api.nvim_set_keymap("n", "<leader>q", ":q!<CR>", {noremap = true, silent = true})

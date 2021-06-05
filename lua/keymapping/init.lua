@@ -2,7 +2,7 @@ local opts = { noremap = true, silent = true }
 
 
 -- ctrl+q close buffer
-vim.api.nvim_set_keymap('n', '<C-q>', ':bd<CR>', opts)
+vim.api.nvim_set_keymap('n', '<C-q>', ':BufDel<CR>', opts)
 -- ctrl+s for save
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', opts)
 -- ctrl+c for close floating stuff or splits
