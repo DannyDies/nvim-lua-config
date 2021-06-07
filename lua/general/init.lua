@@ -1,6 +1,8 @@
 --------------------------- Basics
 -- om hy goddness
 -- vim.cmd[[set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>]]
+vim.cmd'set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz'
+
 vim.g.XkbSwitchEnabled = 1
 vim.o.fileencoding = "utf-8"
 vim.o.encoding      = "UTF-8"             -- encodig utf-8
