@@ -49,7 +49,7 @@ vim.o.history = 10000 -- numbers of entries in history for ':' commands and sear
 ------------------------ Visual stuff
 vim.o.title = true
 vim.wo.number = true -- line numbers
--- vim.wo.relativenumber = true - hate this option
+vim.wo.relativenumber = true -- hate this option
 vim.go.termguicolors = true
 vim.go.t_Co = "256"
 vim.o.showmode = false -- doesn't show vim modes. useful with status lines
