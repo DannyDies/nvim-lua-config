@@ -93,7 +93,7 @@ require('packer').startup(function()
   use 'https://github.com/vimwiki/vimwiki'
   use 'https://github.com/godlygeek/tabular'
   use 'https://github.com/plasticboy/vim-markdown'
-  use 'a-vrma/black-nvim'
+  -- use 'a-vrma/black-nvim'
   -- buffer deletion
   use {'ojroques/nvim-bufdel'}
 --
