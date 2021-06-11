@@ -57,7 +57,7 @@ vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true
 vim.api.nvim_set_keymap("n", "<leader>c", ":BufDel<CR>", {noremap = true, silent = true})
 
 -- Quit
-vim.api.nvim_set_keymap("n", "<leader>q", ":q!<CR>", {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap("n", "<leader>q", ":q!<CR>", {noremap = true, silent = true})
 
 -- terminal
 vim.api.nvim_set_keymap('n', '<Leader>t', ":ToggleTerm<CR>", {silent = true})
@@ -84,7 +84,7 @@ local mappings = {
     ["n"] = "No Highlight",
     ["l"] = "Lazy Git",
     ["a"] = "Select All",
-    ["q"] = "Exit",
+    -- ["q"] = "Exit",
     ["="] = "Balance window",
     ["v"] = "Vertical Split",
     ["h"] = "Horizontal Split",

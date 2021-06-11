@@ -4,7 +4,7 @@ local opts = { noremap = true, silent = true }
 -- ctrl+q close buffer
 vim.api.nvim_set_keymap('n', '<C-q>', ':BufDel<CR>', opts)
 -- ctrl+s for save
-vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', opts)
+vim.api.nvim_set_keymap('n', '<C-s>', ':w!<CR>', opts)
 -- ctrl+c for close floating stuff or splits
 vim.api.nvim_set_keymap('n', '<C-c>', ':close<CR>', opts)
 
@@ -24,6 +24,7 @@ vim.api.nvim_set_keymap('n', 'H', '0',  opts)
 vim.api.nvim_set_keymap('n', 'L', '$',  opts)
 vim.api.nvim_set_keymap('v', 'H', '0',  opts)
 vim.api.nvim_set_keymap('v', 'L', '$',  opts)
+
 -- Fast scroll
 -- vim.api.nvim_set_keymap('n', 'J', '10j',  opts)
 -- vim.api.nvim_set_keymap('n', 'K', '10k',  opts)
@@ -53,6 +54,7 @@ vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprev<CR>',  opts)
 -- ctrl + k, j autocomplete
 vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')
 vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
+
 -- tab autocomplete
 vim.cmd('inoremap <expr> <TAB> (\"\\<C-n>\")')
 vim.cmd('inoremap <expr> <S-TAB> (\"\\<C-p>\")')
@@ -100,3 +102,12 @@ vim.api.nvim_exec([[
 -- Tab indent in insert mode
 vim.api.nvim_set_keymap('i', '<Tab>', '\t', opts)
 vim.api.nvim_set_keymap('i', '<S-Tab>', '\b', opts)
+
+
+-- capslock esc
+vim.api.nvim_set_keymap('n', '<capslock>', '<ESC>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<capslock>', '<ESC>', {noremap = true, silent = true})
+-- Insert mode escape
+vim.api.nvim_set_keymap('i', 'jk', '<ESC>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true, silent = true})

@@ -34,6 +34,7 @@ require('startify-config')
 -- require('dashboard-config')
 -- require('sessions-config')
 
+
 -- Git
 require('lazygit-config')
 require('gitsigns-config')
