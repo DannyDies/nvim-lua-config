@@ -21,7 +21,8 @@ require('treesitter-config')
 require('autopep8-config')
 
 -- Ez life
-require('comment-config')
+-- require('comment-config')
+require('kommentary-config')
 require('surround-config')
 require('quickscope-config')
 

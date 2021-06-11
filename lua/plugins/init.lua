@@ -60,7 +60,7 @@ require('packer').startup(function()
   use {
     'hoob3rt/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
+  } 
 
 
 -- LSP and Autocomplete
@@ -76,7 +76,8 @@ require('packer').startup(function()
   use 'phaazon/hop.nvim'
   use 'unblevable/quick-scope'
 -- Other
-  use {'terrortylor/nvim-comment', config = "require('nvim_comment').setup()"}
+  use 'b3nj5m1n/kommentary'
+  -- use {'terrortylor/nvim-comment', config = "require('nvim_comment').setup()"}
 -- Version Control
   use 'kdheepak/lazygit.nvim'
   use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim', config = "require('neogit').setup {}"}
