@@ -117,14 +117,14 @@ local mappings = {
     c =  {"<Cmd>lua require'telescope-config.finders'.fd_in_nvim()<cr>", "Nvim config"},
     n =  {"<Cmd>lua require'telescope-config.finders'.fd_in_notes()<cr>", "Notes"}
   },
-  m = {
+  --[[ m = {
     name = "+Hop",
     w = {"<cmd>HopWord<CR>", 'Word'},
     m = {"<cmd>HopChar2<CR>", '2 Char'},
     n = {"<cmd>HopChar1<CR>", '1 Char'},
     l = {"<cmd>HopLine<CR>", 'Line'},
     p = {"<cmd>HopPattern<CR>", 'Pattern'}
-    },
+    }, ]]
   d = {
 
         name = "+Debug",

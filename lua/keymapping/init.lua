@@ -16,7 +16,6 @@ vim.api.nvim_set_keymap('n', '<C-c>', ':close<CR>', opts)
 vim.api.nvim_set_keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { noremap = true, expr = true, silent = true})
 vim.api.nvim_set_keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true, silent = true})
 
-
 --
 
 -- H and L for beggining and end visual line
@@ -103,6 +102,29 @@ vim.api.nvim_exec([[
 vim.api.nvim_set_keymap('i', '<Tab>', '\t', opts)
 vim.api.nvim_set_keymap('i', '<S-Tab>', '\b', opts)
 
+--[[ vim.api.nvim_set_keymap('n', 'mm', '<cmd>HopChar2<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'mn', '<cmd>HopChar1<CR>', {noremap = true, silent = true}) ]]
+
+-- Easy options
+vim.g.EasyMotion_startofline = 0 
+vim.g.EasyMotion_use_smartsign_us = 1 
+vim.g.EasyMotion_smartcase = 1
+-- Easy easy
+vim.cmd'map m <Plug>(easymotion-prefix)'
+vim.cmd'nmap mm <Plug>(easymotion-overwin-f2)' -- between splits
+vim.cmd'nmap mn <Plug>(easymotion-t2)' -- foward only
+-- Easy left-right
+vim.cmd'map ml <Plug>(easymotion-lineforward)'
+vim.cmd'map mh <Plug>(easymotion-linebackward)'
+-- Easy search, enter drop highlight
+vim.cmd'map  / <Plug>(easymotion-sn)'
+vim.cmd'omap / <Plug>(easymotion-tn)'
+vim.cmd'map  n <Plug>(easymotion-next)'
+vim.cmd'map  N <Plug>(easymotion-prev)'
+
+-- Close 10 splits with :q!? No, thanks!
+vim.api.nvim_set_keymap('n', 'ZZ', '<cmd>wqall<cr>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'ZQ', '<cmd>qall!<cr>', {noremap = true, silent = true})
 
 -- capslock esc
 vim.api.nvim_set_keymap('n', '<capslock>', '<ESC>', {noremap = true, silent = true})

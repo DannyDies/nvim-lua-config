@@ -4,6 +4,7 @@ vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
 
 
 require'lspconfig'.pyright.setup{}
+require'lspconfig'.bashls.setup{}
 
 local on_attach = function(_client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')

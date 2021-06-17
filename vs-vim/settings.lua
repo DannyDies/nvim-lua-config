@@ -1,12 +1,27 @@
---------------------------- Basics
--- om hy goddness
--- vim.cmd[[set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>]]
+vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.cmd'set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz'
--- vim.g.python3_host_prog = '/home/dannydies/.virtualenvs/global/bin/'
-vim.g.python3_host_prog = '/usr/bin/python'
+vim.g.XkbSwitchEnabled = 1
+-- vim.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.
 vim.cmd('set inccommand=split') -- Make substitution work in realtime
 
-vim.g.XkbSwitchEnabled = 1
+vim.o.title = true
+TERMINAL = vim.fn.expand('$TERMINAL')
+vim.cmd('let &titleold="'..TERMINAL..'"')
+vim.o.titlestring="%<%F%=%l/%L - nvim"
+
+vim.g.nvim_tree_disable_netrw = true -- enable netrw for remote gx gf support (must be set before plugin's packadd)
+vim.g.loaded_netrwPlugin = 1 -- needed for netrw gx command to open remote links in browser
+
+vim.cmd('syntax on') -- syntax highlighting
+
+-- vim.o.guifont = "Hack\\ Nerd\\ Font\\ Mono"
+-- vim.o.guifont = "SauceCodePro Nerd Font:h17"
+-- vim.o.guifont = "FiraCode Nerd Font:h17"
+-- vim.o.guifont = "Jet Brains Mono Font:h17"
+-- vim.o.guifont = "JetBrains\\ Mono\\ Regular\\ Nerd\\ Font\\ Complete"
+
+---------------------------------------------------------------
+
 vim.o.fileencoding = "utf-8"
 vim.o.encoding      = "UTF-8"             -- encodig utf-8
 vim.o.mouse = "a" -- mouse support
@@ -19,15 +34,15 @@ vim.bo.swapfile = false
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.autoread = true -- auto file change detection
-vim.cmd"autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif" -- auto change file on external change
+-- vim.cmd"autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif" -- auto change file on external change
 vim.o.hidden = true  -- allows hidden buffers, this means that a modified buffer doesn't need to be saved when changing
 ------------------------- Tabing and indenting stuff
-vim.o.tabstop = 2
+--[[ vim.o.tabstop = 2
 vim.bo.tabstop = 2
 vim.o.softtabstop = 2
 vim.bo.softtabstop = 2
 vim.o.shiftwidth = 2
-vim.bo.shiftwidth = 2
+vim.bo.shiftwidth = 2 ]]
 vim.o.expandtab = true    -- expand tabs to spaces
 vim.bo.expandtab = true    -- expand tabs to spaces
 vim.o.smarttab = true 	  -- tab infront of a line inserts blanks based on shiftwidth
@@ -50,7 +65,6 @@ vim.o.hlsearch = true		-- highlight the search results
 vim.o.history = 10000 -- numbers of entries in history for ':' commands and search patterns (10000 = max)
 
 ------------------------ Visual stuff
-vim.o.title = true
 vim.wo.number = true -- line numbers
 vim.wo.relativenumber = true -- hate this option
 vim.go.termguicolors = true

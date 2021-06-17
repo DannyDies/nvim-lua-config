@@ -32,8 +32,13 @@ vim.cmd'autocmd BufEnter * silent! lcd %:p:h'
 vim.cmd'map <leader>j <Plug>VimwikiNextLink'
 vim.cmd'map <leader>k <Plug>VimwikiPrevLink'
 -- Split! Work! 
-vim.cmd'map <leader>wv <Plug>VimwikiSplitLink'
-vim.cmd'map <leader>ws <Plug>VimwikiVSplitLink'
+
+
+vim.cmd'nnoremap <Nop> <Plug>Vimwiki2HTML'
+vim.cmd'nnoremap <Nop> <Plug>Vimwiki2HTMLBrowse'
+vim.cmd'map <leader>wh <Plug>VimwikiSplitLink'
+vim.cmd'map <leader>wv <Plug>VimwikiVSplitLink'
+
 
 -- vim.cmd'map <leader>ww <Plug>VimwikiIndex<bar>:cd %:p:h<CR>'
 

@@ -57,7 +57,7 @@ vim.g.startify_lists = {{
 
 
 vim.api.nvim_exec(
-    "let startify_bookmarks = [{ 'a': '~/.config/alacritty/alacritty.yml' }, { 'i': '~/.config/nvim/init.lua' }, { 'z': '~/.zshrc' }, { 'd': '~/.dotfileslist' },{ 'o': '~/Second-Brain/.obsidian.vimrc' }, {'t' : '/home/dannydies/.config/qtile/config.py'}, ]", true)
+    "let startify_bookmarks = [{ 'a': '~/.config/alacritty/alacritty.yml' }, { 'i': '~/.config/nvim/init.lua' }, { 'z': '~/.zshrc' }, { 'd': '~/.dotfileslist' },{ 'o': '~/Second-Brain/.obsidian.vimrc' }, {'t' : '/home/dannydies/.config/qtile/config.py'}, {'v' : '/home/dannydies/.config/vifm/vifmrc'}, ]", true)
 
 -- , { 's': '~/Second-Brain/-000 Scratchpad.md' }
 
