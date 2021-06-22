@@ -68,6 +68,7 @@ require('packer').startup(function()
   } 
 -- LSP and Autocomplete
   use 'neovim/nvim-lspconfig'
+  use 'glepnir/lspsaga.nvim'
   use 'hrsh7th/nvim-compe'
   use 'windwp/nvim-autopairs'
   -- use 'ludovicchabant/vim-gutentags' -- Automatic tags management
@@ -77,7 +78,7 @@ require('packer').startup(function()
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
   use 'kyazdani42/nvim-tree.lua'
   -- use 'phaazon/hop.nvim'
-  use 'unblevable/quick-scope'
+  -- use 'unblevable/quick-scope'
 -- Other
   use 'b3nj5m1n/kommentary'
   -- use {'terrortylor/nvim-comment', config = "require('nvim_comment').setup()"}

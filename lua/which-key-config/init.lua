@@ -117,14 +117,6 @@ local mappings = {
     c =  {"<Cmd>lua require'telescope-config.finders'.fd_in_nvim()<cr>", "Nvim config"},
     n =  {"<Cmd>lua require'telescope-config.finders'.fd_in_notes()<cr>", "Notes"}
   },
-  --[[ m = {
-    name = "+Hop",
-    w = {"<cmd>HopWord<CR>", 'Word'},
-    m = {"<cmd>HopChar2<CR>", '2 Char'},
-    n = {"<cmd>HopChar1<CR>", '1 Char'},
-    l = {"<cmd>HopLine<CR>", 'Line'},
-    p = {"<cmd>HopPattern<CR>", 'Pattern'}
-    }, ]]
   d = {
 
         name = "+Debug",
@@ -158,69 +150,73 @@ local mappings = {
 
 }
 
--- local mappings = {
---     ["/"] = "Comment",
---     ["c"] = "Close Buffer",
---     ["e"] = "Explorer",
---     ["f"] = "Find File",
---     ["h"] = "No Highlight",
---     d = {
---         name = "+Debug",
---         b = {"<cmd>DebugToggleBreakpoint<cr>", "Toggle Breakpoint"},
---         c = {"<cmd>DebugContinue<cr>", "Continue"},
---         i = {"<cmd>DebugStepInto<cr>", "Step Into"},
---         o = {"<cmd>DebugStepOver<cr>", "Step Over"},
---         r = {"<cmd>DebugToggleRepl<cr>", "Toggle Repl"},
---         s = {"<cmd>DebugStart<cr>", "Start"}
---     },
---     g = {
---         name = "+Git",
---         j = {"<cmd>NextHunk<cr>", "Next Hunk"},
---         k = {"<cmd>PrevHunk<cr>", "Prev Hunk"},
---         p = {"<cmd>PreviewHunk<cr>", "Preview Hunk"},
---         r = {"<cmd>ResetHunk<cr>", "Reset Hunk"},
---         R = {"<cmd>ResetBuffer<cr>", "Reset Buffer"},
---         s = {"<cmd>StageHunk<cr>", "Stage Hunk"},
---         u = {"<cmd>UndoStageHunk<cr>", "Undo Stage Hunk"},
---         o = {"<cmd>Telescope git_status<cr>", "Open changed file"},
---         b = {"<cmd>Telescope git_branches<cr>", "Checkout branc"},
---         c = {"<cmd>Telescope git_commits<cr>", "Checkout commit"},
---         C = {"<cmd>Telescope git_bcommits<cr>", "Checkout commit(for current file)"},
---     },
---     l = {
---         name = "+LSP",
---         a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
---         A = {"<cmd>Lspsaga range_code_action<cr>", "Selected Action"},
---         d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
---         D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
---         f = {"<cmd>LspFormatting<cr>", "Format"},
---         i = {"<cmd>LspInfo<cr>", "Info"},
---         l = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
---         L = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line Diagnostics"},
---         p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
---         q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
---         r = {"<cmd>Lspsaga rename<cr>", "Rename"},
---         t = {"<cmd>LspTypeDefinition<cr>", "Type Definition"},
---         x = {"<cmd>cclose<cr>", "Close Quickfix"},
---         s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
---         S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
---     },
---
---     s = {
---         name = "+Search",
---         b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
---         c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
---         d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
---         D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
---         f = {"<cmd>Telescope find_files<cr>", "Find File"},
---         m = {"<cmd>Telescope marks<cr>", "Marks"},
---         M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
---         r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
---         R = {"<cmd>Telescope registers<cr>", "Registers"},
---         t = {"<cmd>Telescope live_grep<cr>", "Text"}
---     },
---     S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}}
--- }
+--[[ vim.cmd("nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>")
+vim.cmd("nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>")
+vim.cmd("nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>")
+vim.cmd("nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>")
+vim.cmd("nnoremap <silent> ca :Lspsaga code_action<CR>")
+vim.cmd("nnoremap <silent> K :Lspsaga hover_doc<CR>")
+-- vim.cmd('nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>')
+vim.cmd("nnoremap <silent> <C-p> :Lspsaga diagnostic_jump_prev<CR>")
+vim.cmd("nnoremap <silent> <C-n> :Lspsaga diagnostic_jump_next<CR>")
+-- scroll down hover doc or scroll in definition preview
+vim.cmd("nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>")
+-- scroll up hover doc
+vim.cmd("nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")
+vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").toggle()') ]]
+
+-- LSP
+--[[ vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-m>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts) ]]
+----------------------------------------
+-- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+-- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+-- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+-- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+-- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+-- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+-- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+-- vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
+-- vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+-- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+-- TODO remap this stuff
+--[[ nnoremap <silent> gh <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
+
+nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<CR>
+vnoremap <silent><leader>ca :<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>
+
+nnoremap <silent> K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+
+-- scroll down hover doc or scroll in definition preview
+nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+-- scroll up hover doc
+nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+
+
+nnoremap <silent> gs <cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>
+nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<CR>
+nnoremap <silent> gd <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
+
+
+-- show
+nnoremap <silent><leader>cd <cmd>lua
+require'lspsaga.diagnostic'.show_line_diagnostics()<CR>
+-- only show diagnostic if cursor is over the area
+nnoremap <silent><leader>cc <cmd>lua
+require'lspsaga.diagnostic'.show_cursor_diagnostics()<CR>
+-- jump diagnostic
+nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
+nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
+
+
+-- float terminal also you can pass the cli command in open_float_terminal function
+nnoremap <silent> <A-d> <cmd>lua require('lspsaga.floaterm').open_float_terminal()<CR> -- or open_float_terminal('lazygit')<CR>
+tnoremap <silent> <A-d> <C-\><C-n>:lua require('lspsaga.floaterm').close_float_terminal()<CR>
+ ]]
 
 local wk = require("which-key")
 wk.register(mappings, opts)

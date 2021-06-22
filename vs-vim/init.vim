@@ -5,6 +5,7 @@ execute 'luafile /home/dannydies/.config/nvim/lua/plugins/init.lua'
 execute 'luafile /home/dannydies/.config/nvim/lua/keymapping/init.lua'
 " execute 'luafile /home/dannydies/.config/nvim/lua/which-key-config/init.lua'
 execute 'luafile /home/dannydies/.config/nvim/lua/plugins/init.lua'
+execute 'luafile /home/dannydies/.config/nvim/lua/easy-config/init.lua'
 
 
 function! s:manageEditorSize(...)
@@ -56,6 +57,7 @@ function! s:openWhichKeyInVisualMode()
     endif
 endfunction
 
+" Easy options
 nmap mm <Plug>(easymotion-s2)
 
 " Better Navigation
@@ -89,3 +91,8 @@ nmap gcc <Plug>VSCodeCommentaryLine
 " Simulate same TAB behavior in VSCode
 nmap <Tab> :Tabnext<CR>
 nmap <S-Tab> :Tabprev<CR>
+
+
+" source /home/dannydies/.config/nvim/vs-vim/vscode-window-commands.vim
+" source /home/dannydies/.config/nvim/vs-vim/vscode-tab-commands.vim
+" source /home/dannydies/.config/nvim/vs-vim/vscode-scrolling.vim

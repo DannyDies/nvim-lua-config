@@ -10,7 +10,8 @@ vim.g.XkbSwitchEnabled = 1
 vim.o.fileencoding = "utf-8"
 vim.o.encoding      = "UTF-8"             -- encodig utf-8
 vim.o.mouse = "a" -- mouse support
-vim.o.clipboard = "unnamedplus" -- oow yeeaah, baby, I can copy right in you!
+-- vim.o.clipboard = "unnamedplus" -- oow yeeaah, baby, I can copy right in you!
+vim.o.clipboard = vim.o.clipboard .. "unnamedplus" -- oow yeeaah, baby, I can copy right in you!
 -- tags as word object
 vim.o.foldlevel = 99 -- unfold all
 ------------------------- Swapfile global & local config
@@ -101,3 +102,24 @@ vim.o.updatetime = 300 -- used for CursorHold event (for document highlighting d
 vim.cmd'au FileType * setlocal formatoptions-=cro'
 -- autochange cwd
 vim.cmd'autocmd BufEnter * silent! lcd %:p:h'
+
+------------ Bilt ins
+  vim.g.nvim_tree_disable_netrw = true 
+  vim.g.loaded_gzip              = 1
+  vim.g.loaded_tar               = 1
+  vim.g.loaded_tarPlugin         = 1
+  vim.g.loaded_zip               = 1
+  vim.g.loaded_zipPlugin         = 1
+  vim.g.loaded_getscript         = 1
+  vim.g.loaded_getscriptPlugin   = 1
+  vim.g.loaded_vimball           = 1
+  vim.g.loaded_vimballPlugin     = 1
+  vim.g.loaded_matchit           = 1
+  vim.g.loaded_matchparen        = 1
+  vim.g.loaded_2html_plugin      = 1
+  vim.g.loaded_logiPat           = 1
+  vim.g.loaded_rrhelper          = 1
+  vim.g.loaded_netrw             = 1
+  vim.g.loaded_netrwPlugin       = 1
+  vim.g.loaded_netrwSettings     = 1
+  vim.g.loaded_netrwFileHandlers = 1

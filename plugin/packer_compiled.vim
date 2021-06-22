@@ -92,6 +92,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dannydies/.local/share/nvim/site/pack/packer/start/lazygit.nvim"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/dannydies/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/dannydies/.local/share/nvim/site/pack/packer/start/lualine.nvim"
@@ -178,10 +182,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dannydies/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
-  ["quick-scope"] = {
-    loaded = true,
-    path = "/home/dannydies/.local/share/nvim/site/pack/packer/start/quick-scope"
-  },
   ["surround.nvim"] = {
     config = { "\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rsurround\frequire\0" },
     loaded = true,
@@ -227,6 +227,10 @@ _G.packer_plugins = {
 }
 
 time("Defining packer_plugins", false)
+-- Config for: surround.nvim
+time("Config for surround.nvim", true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rsurround\frequire\0", "config", "surround.nvim")
+time("Config for surround.nvim", false)
 -- Config for: nvim-bufferline.lua
 time("Config for nvim-bufferline.lua", true)
 require'bufferline'.setup{}
@@ -235,10 +239,6 @@ time("Config for nvim-bufferline.lua", false)
 time("Config for which-key.nvim", true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
 time("Config for which-key.nvim", false)
--- Config for: surround.nvim
-time("Config for surround.nvim", true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rsurround\frequire\0", "config", "surround.nvim")
-time("Config for surround.nvim", false)
 -- Config for: neogit
 time("Config for neogit", true)
 require('neogit').setup {}

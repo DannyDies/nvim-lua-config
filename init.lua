@@ -15,6 +15,7 @@ require('toggleterm-config')
 -- 
 -- Autocomplete
 require('lsp-config')
+require('saga-config')
 require('compe-config')
 require('autopairs-config')
 require('treesitter-config')
@@ -25,6 +26,7 @@ require('autopep8-config')
 require('kommentary-config')
 require('surround-config')
 require('quickscope-config')
+require('easy-config')
 
 -- Nav
 require('telescope-config')
