@@ -51,5 +51,3 @@ require('dapui-config')
 -- Vim wiki
 require('vim-markdown-config')
 require('vim-wiki-config')
-
-

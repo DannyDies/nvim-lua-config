@@ -1,18 +1,13 @@
 --------------------------- Basics
--- om hy goddness
--- vim.cmd[[set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>]]
-vim.cmd'set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz'
 -- vim.g.python3_host_prog = '/home/dannydies/.virtualenvs/global/bin/'
-vim.g.python3_host_prog = '/usr/bin/python'
+-- vim.g.python3_host_prog = '/usr/bin/python'
 vim.cmd('set inccommand=split') -- Make substitution work in realtime
 
-vim.g.XkbSwitchEnabled = 1
+vim.g.XkbSwitchEnabled = 1 -- remember insert mode layout and return to eng layout in normal mode
 vim.o.fileencoding = "utf-8"
 vim.o.encoding      = "UTF-8"             -- encodig utf-8
 vim.o.mouse = "a" -- mouse support
--- vim.o.clipboard = "unnamedplus" -- oow yeeaah, baby, I can copy right in you!
 vim.o.clipboard = vim.o.clipboard .. "unnamedplus" -- oow yeeaah, baby, I can copy right in you!
--- tags as word object
 vim.o.foldlevel = 99 -- unfold all
 ------------------------- Swapfile global & local config
 vim.o.swapfile = false -- can open already open files
@@ -57,7 +52,7 @@ vim.wo.relativenumber = true -- hate this option
 vim.go.termguicolors = true
 vim.go.t_Co = "256"
 vim.o.showmode = false -- doesn't show vim modes. useful with status lines
-vim.wo.cursorline = true   -- show the current line.
+vim.wo.cursorline = false   -- show the current line.
 vim.o.scrolloff = 9 -- keep 9 lines below and up while scrolling
 vim.o.splitbelow = true
 vim.o.splitright = true
@@ -123,3 +118,101 @@ vim.cmd'autocmd BufEnter * silent! lcd %:p:h'
   vim.g.loaded_netrwPlugin       = 1
   vim.g.loaded_netrwSettings     = 1
   vim.g.loaded_netrwFileHandlers = 1
+
+--------------------------------------  Russian mess
+-- oh my goddness
+-- vim.cmd[[set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>]]
+-- vim.cmd'set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz'
+-- Extra fix
+vim.cmd[[
+map zе zt
+map zи zb
+map zя zz
+
+map zф za
+
+map gп gg
+
+map iц iw
+map iх i[
+map iъ i]
+
+map aц aw
+map aх a[
+map aъ a]
+
+map gг gu
+map gГ gU
+
+nmap gм gv
+
+map <Space>. /
+]]
+-- Default fix
+vim.cmd[[map ё `
+map й q
+map ц w
+map у e
+map к r
+map е t
+map н y
+map г u
+map ш i
+map щ o
+map з p
+map х [
+map ъ ]
+map ф a
+map ы s
+map в d
+map а f
+map п g
+map р h
+map о j
+map л k
+map д l
+map ж ;
+map э '
+map я z
+map ч x
+map с c
+map м v
+map и b
+map т n
+map ь m
+map б ,
+map ю .
+map Ё ~
+map Й Q
+map Ц W
+map У E
+map К R
+map Е T
+map Н Y
+map Г U
+map Ш I
+map Щ O
+map З P
+map Х {
+map Ъ }
+map Ф A
+map Ы S
+map В D
+map А F
+map П G
+map Р H
+map О J
+map Л K
+map Д L
+map Ж :
+map Э "
+map Я Z
+map Ч X
+map С C
+map М V
+map И B
+map Т N
+map Ь M
+map Б <
+map Ю >
+]]
