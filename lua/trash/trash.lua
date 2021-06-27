@@ -1,3 +1,12 @@
+-- require('galaxyline-config')
+-- require('comment-config')
+-- require('hop-config')
+-- require('dashboard-config')
+-- require('sessions-config')
+-- require('quickscope-config')
+
+
+
 -------------------------- which-key.lua
   -- s = {
   --   name = '+Dashboard',

@@ -19,7 +19,7 @@ vim.cmd'map F <Plug>(easymotion-F)'
 vim.cmd'map t <Plug>(easymotion-t)'
 vim.cmd'map T <Plug>(easymotion-T)'
 
--- ctrl+q close buffer
+-- ctrl+q close buffer(using plugin)
 vim.api.nvim_set_keymap('n', '<C-q>', ':BufDel<CR>', opts)
 -- ctrl+s for save
 vim.api.nvim_set_keymap('n', '<C-s>', ':w!<CR>', opts)
