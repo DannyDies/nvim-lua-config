@@ -125,6 +125,7 @@ vim.cmd'autocmd BufEnter * silent! lcd %:p:h'
 -- vim.cmd'set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz'
 -- Extra fix
 vim.cmd[[
+
 map zе zt
 map zи zb
 map zя zz
@@ -133,13 +134,6 @@ map zф za
 
 map gп gg
 
-map iц iw
-map iх i[
-map iъ i]
-
-map aц aw
-map aх a[
-map aъ a]
 
 map gг gu
 map gГ gU

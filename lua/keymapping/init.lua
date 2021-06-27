@@ -1,4 +1,5 @@
 local opts = { noremap = true, silent = true }
+
 -- Easy easy
 vim.cmd'map m <Plug>(easymotion-prefix)'
 vim.cmd'nmap mm <Plug>(easymotion-overwin-f2)' -- between splits
@@ -33,10 +34,8 @@ vim.api.nvim_set_keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { noremap = true,
 vim.api.nvim_set_keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true, silent = true})
 
 -- H and L for beggining and end visual line
-vim.api.nvim_set_keymap('n', 'H', '0',  opts)
-vim.api.nvim_set_keymap('n', 'L', '$',  opts)
-vim.api.nvim_set_keymap('v', 'H', '0',  opts)
-vim.api.nvim_set_keymap('v', 'L', '$',  opts)
+vim.cmd'noremap H g^'
+vim.cmd'noremap L g$'
 
 -- Resize windows
 vim.api.nvim_set_keymap('n', '<M-j>', ':resize -2<CR>',  opts)
@@ -53,9 +52,6 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {silent = true })
 -- Keep selection in visual mode when shifting
 vim.api.nvim_set_keymap('v', '<', '<gv',  opts)
 vim.api.nvim_set_keymap('v', '>', '>gv',  opts)
---[[ vim.api.nvim_set_keymap('n', '<', '<<',  opts)
-vim.api.nvim_set_keymap('n', '>', '>>',  opts) ]]
-
 
 -- Tab buffer toggle
 vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>',  opts)
@@ -93,26 +89,3 @@ vim.api.nvim_exec([[
 -- Tab indent in insert mode
 vim.api.nvim_set_keymap('i', '<Tab>', '\t', opts)
 vim.api.nvim_set_keymap('i', '<S-Tab>', '\b', opts)
-
--- capslock esc
-vim.api.nvim_set_keymap('n', '<capslock>', '<ESC>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('v', '<capslock>', '<ESC>', {noremap = true, silent = true})
--- Insert mode escape
-vim.api.nvim_set_keymap('i', 'jk', '<ESC>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true, silent = true})
-
-
-
-
-
---[[ Change 2 split windows from vert to horiz or horiz to vert
-map <Leader>th <C-w>t<C-w>H
-map <Leader>tk <C-w>t<C-w>K ]]
-	
---[[ Vifm
-map <Leader>vv :Vifm<CR>
-map <Leader>vs :VsplitVifm<CR>
-map <Leader>sp :SplitVifm<CR>
-map <Leader>dv :DiffVifm<CR>
-map <Leader>tv :TabVifm<CR> ]]
