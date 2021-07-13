@@ -1,9 +1,5 @@
 --------------------------- Basics
--- vim.g.python3_host_prog = '/home/dannydies/.virtualenvs/global/bin/'
--- vim.g.python3_host_prog = '/usr/bin/python'
 vim.cmd('set inccommand=split') -- Make substitution work in realtime
-
-vim.g.XkbSwitchEnabled = 1 -- remember insert mode layout and return to eng layout in normal mode
 vim.o.fileencoding = "utf-8"
 vim.o.encoding      = "UTF-8"             -- encodig utf-8
 vim.o.mouse = "a" -- mouse support
@@ -97,35 +93,47 @@ vim.o.updatetime = 300 -- used for CursorHold event (for document highlighting d
 vim.cmd'au FileType * setlocal formatoptions-=cro'
 -- autochange cwd
 vim.cmd'autocmd BufEnter * silent! lcd %:p:h'
+-- no spellcheck
+-- vim.cmd'au TermOpen * setlocal nospell'
 
 ------------ Bilt ins
-  vim.g.nvim_tree_disable_netrw = true 
-  vim.g.loaded_gzip              = 1
-  vim.g.loaded_tar               = 1
-  vim.g.loaded_tarPlugin         = 1
-  vim.g.loaded_zip               = 1
-  vim.g.loaded_zipPlugin         = 1
-  vim.g.loaded_getscript         = 1
-  vim.g.loaded_getscriptPlugin   = 1
-  vim.g.loaded_vimball           = 1
-  vim.g.loaded_vimballPlugin     = 1
-  vim.g.loaded_matchit           = 1
-  vim.g.loaded_matchparen        = 1
-  vim.g.loaded_2html_plugin      = 1
-  vim.g.loaded_logiPat           = 1
-  vim.g.loaded_rrhelper          = 1
-  vim.g.loaded_netrw             = 1
-  vim.g.loaded_netrwPlugin       = 1
-  vim.g.loaded_netrwSettings     = 1
-  vim.g.loaded_netrwFileHandlers = 1
+vim.g.nvim_tree_disable_netrw = true 
+vim.g.loaded_gzip              = 1
+vim.g.loaded_tar               = 1
+vim.g.loaded_tarPlugin         = 1
+vim.g.loaded_zip               = 1
+vim.g.loaded_zipPlugin         = 1
+vim.g.loaded_getscript         = 1
+vim.g.loaded_getscriptPlugin   = 1
+vim.g.loaded_vimball           = 1
+vim.g.loaded_vimballPlugin     = 1
+vim.g.loaded_matchit           = 1
+vim.g.loaded_matchparen        = 1
+vim.g.loaded_2html_plugin      = 1
+vim.g.loaded_logiPat           = 1
+vim.g.loaded_rrhelper          = 1
+vim.g.loaded_netrw             = 1
+vim.g.loaded_netrwPlugin       = 1
+vim.g.loaded_netrwSettings     = 1
+vim.g.loaded_netrwFileHandlers = 1
 
 --------------------------------------  Russian mess
--- oh my goddness
+-------------------------------------- Oh Ny Goddness
+
+-- vim.g.XkbSwitchEnabled = 1 -- remember insert mode layout and return to eng layout in normal mode
+
+--[[ vim.cmd[[
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+imap <C-l> <C-^>
+]]
+
 -- vim.cmd[[set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>]]
--- vim.cmd'set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz'
+
+vim.cmd'set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz'
 -- Extra fix
 vim.cmd[[
-
 map zе zt
 map zи zb
 map zя zz
@@ -141,6 +149,9 @@ map gГ gU
 nmap gм gv
 
 map <Space>. /
+
+map ZЙ ZQ
+map ZЯ ZZ 
 ]]
 -- Default fix
 vim.cmd[[map ё `

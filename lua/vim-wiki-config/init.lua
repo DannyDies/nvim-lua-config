@@ -5,11 +5,11 @@ vim.o.conceallevel = 0 -- show conceal text normally. I can see `` in markdown f
 
 vim.g.vimwiki_list = {
 {
-    path = '/home/dannydies/Second-Brain/',
+    path = '/home/dannydies/thread-box/',
     syntax = 'default',
     ext = '.md',
     name = 'Scratchpad',
-    index = '-000 Scratchpad'
+    index = '+ Scratchpad'
 }
 }
 -- vim.cmd'autocmd FileType vimwiki set ft=markdown'
